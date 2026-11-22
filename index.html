@@ -267,11 +267,11 @@
   </div>
   <div class="underline"></div>
 
- <style>
+<style>
   /* ===== CARD DESTAQUE DA PLATAFORMA (TRANSPARENTE UNIVERSAL) ===== */
   .plat-box{
-    position:relative;width:100%;margin:20px auto;padding:16px 16px 18px;border-radius:24px;
-    background:rgba(255,255,255,.05);
+    position:relative;width:100%;max-width:420px;margin:20px auto;padding:16px 16px 18px;border-radius:24px;
+    background:rgba(255,255,255,.08);
     backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
     border:1.5px solid rgba(255,255,255,.16);
     box-shadow:0 16px 36px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.18);
@@ -279,7 +279,7 @@
   }
   /* Tag superior direita */
   .plat-top{
-    position:relative;z-index:1;display:flex;justify-content:flex-end;margin-bottom:8px;
+    position:relative;z-index:2;display:flex;justify-content:flex-end;margin-bottom:6px;
   }
   .plat-tag{
     display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;
@@ -287,22 +287,22 @@
   }
   .plat-tag svg{width:12px;height:12px;stroke:currentColor}
 
-  /* Área da Logo Grande (100% transparente para PNG sem fundo flutuar) */
+  /* Área da Logo Grande (ocupa quase o card inteiro sem invadir o botão) */
   .plat-brand{
     position:relative;z-index:1;display:flex;align-items:center;justify-content:center;
-    width:100%;min-height:92px;margin:4px 0 18px;padding:4px;
-    background:transparent;border:none;box-sizing:border-box;
+    width:100%;height:190px;margin:0 0 14px;padding:0;
+    background:transparent;border:none;overflow:hidden;box-sizing:border-box;
   }
   .plat-logo{
-    width:100%;max-width:260px;height:90px;object-fit:contain;display:block;
+    width:95%;height:100%;object-fit:contain;display:block;
     filter:drop-shadow(0 6px 14px rgba(0,0,0,.45));
   }
 
   /* Botão JOGAR AGORA (Estilo Vidro Transparente igual ao Card) */
   .plat-btn{
-    position:relative;z-index:1;display:flex;align-items:center;gap:12px;
-    width:100%;padding:12px 14px;border-radius:18px;text-decoration:none;
-    background:rgba(255,255,255,.07);
+    position:relative;z-index:2;display:flex;align-items:center;gap:12px;
+    width:100%;padding:12px 14px;border-radius:18px;text-decoration:none;cursor:pointer;
+    background:rgba(255,255,255,.09);
     backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
     border:1.5px solid rgba(255,255,255,.22);
     box-shadow:0 10px 24px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.25);
@@ -315,7 +315,7 @@
     animation:platShine 3.4s ease-in-out infinite;
   }
   @keyframes platShine{0%{background-position:150% 0}55%,100%{background-position:-50% 0}}
-  .plat-btn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.38)}
+  .plat-btn:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.38)}
   .plat-btn:active{transform:translateY(2px)}
 
   /* Ícone Play esquerdo */
@@ -375,6 +375,7 @@
     </span>
   </a>
 </div>
+
 
 
     <section class="rtp-sec">
